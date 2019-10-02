@@ -3,7 +3,8 @@ title:  【记录点滴】——一个时期的终结
 author:  青叶沃若
 layout:  post
 ---
-![致青春]（https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570015022747&di=87df0173dea151ac31479dd9f6f86f36&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheji%2F20150817%2Fzhiqingchunganenyounihuodonghaibaosheji_4821950.jpg）
+# 我的青春小鸟一去不回来
+![致青春](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570015022747&di=87df0173dea151ac31479dd9f6f86f36&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheji%2F20150817%2Fzhiqingchunganenyounihuodonghaibaosheji_4821950.jpg)
 
 突然收到她要结婚的消息，起先是一个初中死党拐弯抹角告诉我的，后来不到半个小时就收到了她亲
 自发来的邀请。内容很简短，看样子是群发消息：“我七月六号（农历六月初四）结婚，有空的话就
@@ -23,6 +24,7 @@ layout:  post
 。突然他把婚纱照发给了我，男方身材中胖、人中较深，带个大黑框眼镜，仔细看有几分像伊相杰。
 她则身着黑色长裙礼服，由于她的个子不高，感觉这件衣服并不很搭她。中指有婚戒、耳朵着耳环。
 美还是美的。随后找理由结束了聊天。
+
   心中平静，没有更多波澜。但我觉得人生中一些时刻是有必要记得的，万一哪一天老年痴呆了，回
 顾前半生发现是空白的可就惨了，就像玩游戏忘记存档一样。出于这种考量，我决定将和她有关的
 事记录下来，以后不再去产生交集。:smile:
