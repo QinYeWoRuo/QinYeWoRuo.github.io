@@ -4,8 +4,8 @@ author:  青叶沃若
 layout:  post
 ---
 # 我的青春小鸟一去不回来
-![致青春](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570015022747&di=87df0173dea151ac31479dd9f6f86f36&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheji%2F20150817%2Fzhiqingchunganenyounihuodonghaibaosheji_4821950.jpg)
-<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570015022747&di=87df0173dea151ac31479dd9f6f86f36&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheji%2F20150817%2Fzhiqingchunganenyounihuodonghaibaosheji_4821950.jpg" width="48">
+
+![致青春]<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1570015022747&di=87df0173dea151ac31479dd9f6f86f36&imgtype=0&src=http%3A%2F%2Fimg.redocn.com%2Fsheji%2F20150817%2Fzhiqingchunganenyounihuodonghaibaosheji_4821950.jpg" width="300">
   突然收到她要结婚的消息，起先是一个初中死党拐弯抹角告诉我的，后来不到半个小时就收到了她亲
 自发来的邀请。内容很简短，看样子是群发消息：“我七月六号（农历六月初四）结婚，有空的话就
 来吧。”看着消息一时心情复杂，谈不上后悔、谈不上失落、在某一瞬脸上甚至还挂起一丝邪魅的、
