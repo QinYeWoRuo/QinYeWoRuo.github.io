@@ -4,7 +4,7 @@ author:  青叶沃若
 layout:  杂记
 ---
 ~~*Why so serious?*~~(:p) 
-
+![公园风景](file:///C:/Users/SAMSUNG/Documents/Tencent%20Files/2071440937/FileRecv/MobileFile/IMG_20200412_163347.jpg)
 &nbsp;&nbsp;做梦梦到了初恋，一个神奇的开局，我和她在一起走在家乡城市的街道上，那感觉很舒服。走了好
 久我问他他家里那人不在吗？（担心人家万一在的话，撞到我俩这样就不妙了）她则很随意轻松的
 说到：没关系，他现在不在这个城市。我想说什么，但是有觉得场合不对也就没多嘴。不一会儿，
