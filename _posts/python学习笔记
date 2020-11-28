@@ -589,4 +589,25 @@ Python 中有几个内建模块，您可以随时导入:  platform
 有一个内置函数可以列出模块中的所有函数名（或变量名）。dir() 函数：
 dir() 函数可用于所有模块，也可用于您自己创建的模块。
 
+# 从模块导入 **from**
+您可以使用 from 关键字选择仅从模块导入部件。
+仅从模块导入 person1 字典：
+
+```
+from mymodule import person1
+
+print (person1["age"])
+```
+提示：在使用 from 关键字导入时，请勿在引用模块中的元素时重复使用模块名称。
+示例：person1["age"]，而不是 mymodule.person1["age"]。
+
+# 日期
+[日期数据的操作](https://www.w3school.com.cn/python/python_datetime.asp)
+
+
+
+
+
+
+
 
