@@ -604,8 +604,10 @@ print (person1["age"])
 # 日期
 [日期数据的操作](https://www.w3school.com.cn/python/python_datetime.asp)
 
+# JSON 是用于存储和交换数据的语法。
 
-
+JSON 是用 JavaScript 对象表示法（JavaScript object notation）编写的文本
+[链接](https://www.w3school.com.cn/python/python_json.asp)
 
 
 
