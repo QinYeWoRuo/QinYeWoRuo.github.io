@@ -609,12 +609,145 @@ JSON 是用于存储和交换数据的语法。
 JSON 是用 JavaScript 对象表示法（JavaScript object notation）编写的文本
 [链接](https://www.w3school.com.cn/python/python_json.asp)
 
-# ndjs
+# RegEx
+RegEx 或正则表达式是形成搜索模式的字符序列。
 
-![本地图片](E:\\wallpapers\\Bing必应\\1600863125.bing.lylares.com.hd.jpg)
+RegEx 可用于**检查字符串是否包含指定的搜索模式。**
 
-![本地图片1](E:\wallpapers\Bing必应\1600863125.bing.lylares.com.hd.jpg)
+* Python 提供名为 re 的内置包，可用于处理正则表达式。
 
-![ghvb](‪C:\Users\Samsung\Documents\GitHub\QinYeWoRuo.github.io\_posts\浓烈热情也不失天真.jpg)
+ 检索字符串以查看它是否以 "China" 开头并以 "country" 结尾：
+```
+import re
 
-![ghvb](‪C:\\Users\\Samsung\\Documents\\GitHub\\QinYeWoRuo.github.io\\_posts\\浓烈热情也不失天真.jpg)
+txt = "China is a great country"
+x = re.search("^China.*country$", txt)
+```
+RegEx 函数
+re 模块提供了一组函数，允许我们**检索字符串以进行匹配**
+
+|函数|	描述|
+|:---|:---:|
+|findall|	返回包含所有匹配项的列表|
+|search|	如果字符串中的任意位置存在匹配，则返回 Match 对象|
+|split|	返回在每次匹配时拆分字符串的列表|
+|sub|	用字符串替换一个或多个匹配项|
+
+**元字符**
+
+元字符是具有特殊含义的字符：
+
+|字符	|描述|	示例|	
+|---|---|---|
+|`[]`|	一组字符|	"[a-m]"	|
+|`\`|	示意特殊序列（也可用于转义特殊字符）	|"\d"|	
+|`.`	|任何字符（换行符除外）|	"he..o"	|
+|`^`	|起始于	|"^hello"|
+|`$`	|结束于|	"world$"|
+|`*`|	零次或多次出现|"aix*"	|
+|`+`|	一次或多次出现|	"aix+"	|
+|`{}`|	确切地指定的出现次数	|"al{2}"|
+|`|`|	两者任一|	"falls`|`stays"|
+|`()`|	捕获和分组||		
+
+**特殊序列**指的是 `\` 后跟下表中的某个字符，拥有特殊含义：
+
+**集合（Set）** 是一对方括号`[]` 内的一组字符，具有特殊含义：
+
+|集合	|描述|	
+|---|---|
+|[arn]|	返回一个匹配项，其中存在指定字符（a，r 或 n）之一|
+|[a-n]|	返回字母顺序 a 和 n 之间的任意小写字符匹配项	|
+|[^arn]|	返回除 a、r 和 n 之外的任意字符的匹配项	|
+|[0123]|	返回存在任何指定数字（0、1、2 或 3）的匹配项	|
+|[0-9]|	返回 0 与 9 之间任意数字的匹配	|
+|[0-5][0-9]	|返回介于 0 到 9 之间的任何数字的匹配项	|
+|[a-zA-Z]|	返回字母顺序 a 和 z 之间的任何字符的匹配，小写或大写|	
+|[+]|	在集合中，+、`*`、.、`|`、()、$、{} 没有特殊含义，因此 [+] 表示：返回字符串中任何 + 字符的匹配项	|
+
+* split()函数中可以通过指定 maxsplit 参数来控制出现次数
+* sub()函数 可以通过指定 count 参数来控制替换次数
+
+**Match 对象**是包含有关搜索和结果信息的对象。[例子](https://www.w3school.com.cn/tiy/t.asp?f=python_regex_match)
+
+Match 对象提供了**用于取回有关搜索及结果信息的属性和方法 :**
+
+* span() 返回的元组包含了匹配的开始和结束位置
+* .string 返回传入函数的字符串
+* group() 返回匹配的字符串部分
+
+注释：如果没有匹配，则返回值 None，而不是 Match 对象。
+
+# 字符串格式化
+
+为了**确保字符串按预期显示**，我们可以使用 **format() 方法**对结果进行**格式化**。
+
+format() 方法允许您格式化字符串的选定部分。
+
+有时文本的一部分是你无法控制的，也许它们来自数据库或用户输入？
+
+要控制此类值，请在文本中添加占位符（花括号 {}），然后通过 format() 方法运行值：
+
+添加要显示价格的占位符：
+```
+price = 52
+txt = "The price is {} dollars"
+print(txt.format(price))
+```
+
+您可以在花括号内添加参数以指定如何转换值：
+
+实例
+将价格格式化为带有两位小数的数字：
+```
+txt = "The price is {:.2f} dollars"
+```
+查看字符串 format() 参考手册中的所有格式类型。
+
+**多个值**
+如需使用更多值，只需向 format() 方法添加更多值,并添加更多占位符：
+
+实例
+```
+quantity = 3
+itemno = 567
+price = 52
+myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
+```
+# 索引号
+书接上文，您可以使用索引号（花括号 {0} 内的数字）来确保将值放在正确的占位符中; 此外，如果要多次引用相同的值，请使用索引号。数字索引  0，1，2，3...
+
+# 命名索引
+您还可以通过在花括号 {carname} 中输入名称来使用命名索引，但是在传递参数值 txt.format(carname = "Ford") 时，必须使用名称：
+
+实例
+```
+myorder = "I have a {carname}, it is a {model}."
+print(myorder.format(carname = "Porsche", model = "911"))
+```
+* [python输入一个数组(一维或二维)](https://www.php.cn/python-tutorials-427886.html)
+* 在参数名前面的*表示args是一个可变参数
+* 如果我们导入的模块除了定义函数之外还中有可以执行代码，那么Python解释器在导入这个模块时就会执行这些代码，事实上我们可能并不希望如此，因此如果我们在模块中编写了执行代码，最好是将这些执行代码放入如下所示的条件中，这样的话除非直接运行该模块，if条件下的这些代码是不会执行的，因为只有直接执行的模块的名字才是"__main__"。
+
+module3.py
+```{python}
+def foo():
+    pass
+
+
+def bar():
+    pass
+
+
+# __name__是Python中一个隐含的变量它代表了模块的名字
+# 只有被Python解释器直接执行的模块的名字才是__main__
+if __name__ == '__main__':
+    print('call foo()')
+    foo()
+    print('call bar()')
+    bar()
+```
+* `int(num ** 0.5)`  转换整型数据时，默认向下取整
+	
+	
