@@ -1,0 +1,52 @@
+---
+title: "具体数学笔记——和式"
+author: "欢"
+date: "2020/12/1"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 单\#标题
+## 双\#\#标题
+注：\#号包含子模块，擅用
+
+
+<http://rmarkdown.rstudio.com>  ~链接语法：`<网址>`
+
+
+ **Knit**   
+ *Knit*<br>
+ 运行一串代码，呈现出代码和运行结果
+
+```{r cars}
+cs <- function(n){
+  if(n==1||n==2){return (1)}
+  if(n==3){return(2)}
+  if(n>3){
+    if(n%%2==0){
+      t=cs(n/2)+cs(n/2+1)-1
+      return(t)}
+    else{
+      tt=2*cs((n+1)/2)-1
+        return(tt)
+    }
+  }
+}
+
+cs(15)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.`1+1`

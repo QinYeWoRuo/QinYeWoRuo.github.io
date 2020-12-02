@@ -87,6 +87,83 @@ complex,~用 "j" 作为虚部编写  如:  2+3j<br>
 * 小结：左闭右开原则，自左向右取值原则（即使是负索引，左小右大）
 * 获取字符串的长度~ len() 函数。此函数还可用于求列表（向量）的长度
 
+Python为字符串类型提供了非常丰富的运算符，我们可以使用+运算符来实现字符串的拼接，可以使用\*运算符来重复一个字符串的内容，可以使用in和not in来判断一个字符串是否包含另外一个字符串（成员运算），我们也可以用[]和[:]运算符从字符串取出某个字符或某些字符（切片运算），代码如下所示。
+
+**::符号——可以设置步长方向，用法[定位点::步长和方向参数] 例子如下，定位点可以缺省，第二个参数就是一个非零整数**
+```
+s1 = 'hello ' * 3
+print(s1) # hello hello hello 
+s2 = 'world'
+s1 += s2
+print(s1) # hello hello hello world
+print('ll' in s1) # True
+print('good' in s1) # False
+str2 = 'abc123456'
+# 从字符串中取出指定位置的字符(下标运算)
+print(str2[2]) # c
+# 字符串切片(从指定的开始索引到指定的结束索引)
+print(str2[2:5]) # c12
+print(str2[2:]) # c123456
+print(str2[2::2]) # c246
+print(str2[::2]) # ac246
+print(str2[::-1]) # 654321cba
+print(str2[-3:-1]) # 45
+```
+
+在Python中，我们还可以通过一系列的方法来完成对字符串的处理，代码如下所示。
+```
+str1 = 'hello, world!'
+# 通过内置函数len计算字符串的长度
+print(len(str1)) # 13
+# 获得字符串首字母大写的拷贝
+print(str1.capitalize()) # Hello, world!
+# 获得字符串每个单词首字母大写的拷贝
+print(str1.title()) # Hello, World!
+# 获得字符串变大写后的拷贝
+print(str1.upper()) # HELLO, WORLD!
+# 从字符串中查找子串所在位置
+print(str1.find('or')) # 8
+print(str1.find('shit')) # -1
+# 与find类似但找不到子串时会引发异常
+# print(str1.index('or'))
+# print(str1.index('shit'))
+# 检查字符串是否以指定的字符串开头
+print(str1.startswith('He')) # False
+print(str1.startswith('hel')) # True
+# 检查字符串是否以指定的字符串结尾
+print(str1.endswith('!')) # True
+# 将字符串以指定的宽度居中并在两侧填充指定的字符
+print(str1.center(50, '*'))
+# 将字符串以指定的宽度靠右放置左侧填充指定的字符
+print(str1.rjust(50, ' '))
+str2 = 'abc123456'
+# 检查字符串是否由数字构成
+print(str2.isdigit())  # False
+# 检查字符串是否以字母构成
+print(str2.isalpha())  # False
+# 检查字符串是否以数字和字母构成
+print(str2.isalnum())  # True
+str3 = '  jackfrued@126.com '
+print(str3)
+# 获得字符串修剪左右两侧空格之后的拷贝
+print(str3.strip())
+```
+
+我们之前讲过，可以用下面的方式来格式化输出字符串。
+```
+a, b = 5, 10
+print('%d * %d = %d' % (a, b, a * b))
+```
+当然，我们也可以用字符串提供的方法来完成字符串的格式，代码如下所示。
+```
+a, b = 5, 10
+print('{0} * {1} = {2}'.format(a, b, a * b))
+```
+Python3.6以后，格式化字符串还有更为简洁的书写方式，就是在字符串前加上字母f，我们可以使用下面的语法糖来简化上面的代码。
+```
+a, b = 5, 10
+print(f'{a} * {b} = {a * b}')
+```
 # 运算
 
 [网址链接](https://www.w3school.com.cn/python/python_operators.asp)
@@ -217,6 +294,96 @@ Python 有一组可以在列表上使用的内建方法。
 |[reverse()](https://www.w3school.com.cn/python/ref_list_reverse.asp)	||颠倒列表的顺序|
 |[sort()](https://www.w3school.com.cn/python/ref_list_sort.asp)	||对列表进行排序（**值得一看！**）|
 
+* python range() 函数可创建一个整数列表，一般用在 for 循环中。
+
+函数语法
+range(start, stop[, step])
+参数说明：
+
+start: 计数从 start 开始。默认是从 0 开始。例如range（5）等价于range（0， 5）;
+
+stop: 计数到 stop 结束，但不包括 stop。例如：range（0， 5） 是[0, 1, 2, 3, 4]没有5
+
+step：步长，默认为1。例如：range（0， 5） 等价于 range(0, 5, 1)
+# 提取列表中的内容
+```
+# 通过循环用下标遍历列表元素
+for index in range(len(list1)):
+    print(list1[index])
+# 通过for循环遍历列表元素
+for elem in list1:
+    print(elem)
+# 通过enumerate函数处理列表之后再遍历可以同时获得元素索引和值
+for index, elem in enumerate(list1):
+    print(index, elem)
+```
+
+# 下面的代码演示了如何向列表中添加元素以及如何从列表中移除元素。
+```
+list1 = [1, 3, 5, 7, 100]
+# 添加元素
+list1.append(200)
+list1.insert(1, 400)
+# 合并两个列表
+# list1.extend([1000, 2000])
+list1 += [1000, 2000]
+print(list1) # [1, 400, 3, 5, 7, 100, 200, 1000, 2000]
+print(len(list1)) # 9
+# 先通过成员运算判断元素是否在列表中，如果存在就删除该元素
+if 3 in list1:
+	list1.remove(3)
+if 1234 in list1:
+    list1.remove(1234)
+print(list1) # [1, 400, 5, 7, 100, 200, 1000, 2000]
+# 从指定的位置删除元素
+list1.pop(0)
+list1.pop(len(list1) - 1)
+print(list1) # [400, 5, 7, 100, 200, 1000]
+# 清空列表元素
+list1.clear()
+print(list1) # []
+```
+
+列表做切片同字符串
+
+# 下面的代码实现了对列表的排序操作。
+```
+list1 = ['orange', 'apple', 'zoo', 'internationalization', 'blueberry']
+list2 = sorted(list1)
+# sorted函数返回列表排序后的拷贝不会修改传入的列表
+# 函数的设计就应该像sorted函数一样尽可能不产生副作用
+list3 = sorted(list1, reverse=True)
+# 通过key关键字参数指定根据字符串长度进行排序而不是默认的字母表顺序
+list4 = sorted(list1, key=len)
+print(list1)
+print(list2)
+print(list3)
+print(list4)
+# 给列表对象发出排序消息直接在列表对象上进行排序
+list1.sort(reverse=True)
+print(list1)
+```
+生成式和生成器
+# 我们还可以使用列表的生成式语法来创建列表，代码如下所示。
+```
+f = [x for x in range(1, 10)]
+print(f)
+f = [x + y for x in 'ABCDE' for y in '1234567']
+print(f)
+# 用列表的生成表达式语法创建列表容器
+# 用这种语法创建列表之后元素已经准备就绪所以需要耗费较多的内存空间
+f = [x ** 2 for x in range(1, 1000)]
+print(sys.getsizeof(f))  # 查看对象占用内存的字节数
+print(f)
+# 请注意下面的代码创建的不是一个列表而是一个生成器对象
+# 通过生成器可以获取到数据但它不占用额外的空间存储数据
+# 每次需要数据的时候就通过内部的运算得到数据(需要花费额外的时间)
+f = (x ** 2 for x in range(1, 1000))
+print(sys.getsizeof(f))  # 相比生成式生成器不占用存储数据的空间
+print(f)
+for val in f:
+    print(val)
+```
 
 # 更改元组值
 创建元组后，您将无法更改其值。元组是不可变的，或者也称为恒定的。
@@ -750,4 +917,79 @@ if __name__ == '__main__':
 ```
 * `int(num ** 0.5)`  转换整型数据时，默认向下取整
 	
-	
+# for _ in range(n)
+中 _ 是占位符， 表示不在意变量的值 只是用于循环遍历n次。
+
+# 二 生成器函数
+2.1 yield  生成器函数
+yield 类似于 return
+共同点在于:执行到这句话都会把值返回出去
+不同点在于:yield每次返回时,会记住上次离开时执行的位置 , 下次在调用生成器 , 会从上次执行的位置往下走
+           而return直接终止函数,每次重头调用.
+yield 6 和 yield(6) 2种写法都可以 yield 6 更像 return 6 的写法 推荐使用
+定义一个生成器
+
+```
+def func():
+        print("one")
+        yield  1
+
+        print("two")
+        yield 2
+
+        print("three")
+        yield 3
+
+# 初始化生成器函数 => 返回一个生成器对象 简称生成器
+gen = func()
+
+res = next(gen)
+print(res)
+res = next(gen)
+print(res)
+res = next(gen)
+print(res)
+```
+
+运行输出：
+```
+[root@node10 python]# python3 test.py
+one
+1
+two
+2
+three
+3
+```
+
+执行过程
+
+首先初始化生成器函数 返回生成器对象,简称生成器
+    有了生成器之后 可以使用next进行依次的调用
+    第一次 print(one)   记录当前的状态,暂停等待下一次调用 通过yield 1 返回1 ,阻塞代码
+    第二次 print(two)   记录当前的状态,暂停等待下一次调用 通过yield 2 返回2 ,阻塞代码
+    第三次 print(three) 记录当前的状态,暂停等待下一次调用 通过yield 3 返回3 ,阻塞代码
+    到此已经没有值可以在拿出来了,如果在调用,直接越界报错.
+
+# 创建集合的构造器语法(面向对象部分会进行详细讲解)
+set2 = set(range(1, 10))
+set3 = set((1, 2, 3, 3, 2, 1))
+print(set2, set3)
+# 创建集合的推导式语法(推导式也可以用于推导集合)
+set4 = {num for num in range(1, 100) if num % 3 == 0 or num % 5 == 0}
+print(set4)
+
+**pop() 方法**用于随机移除一个元素。
+
+我们之前讲过，可以用下面的方式来格式化输出字符串。
+
+a, b = 5, 10
+print('%d * %d = %d' % (a, b, a * b))
+当然，我们也可以用字符串提供的方法来完成字符串的格式，代码如下所示。
+
+a, b = 5, 10
+print('{0} * {1} = {2}'.format(a, b, a * b))
+Python 3.6以后，格式化字符串还有更为简洁的书写方式，就是在字符串前加上字母f，我们可以使用下面的语法糖来简化上面的代码。
+
+a, b = 5, 10
+print(f'{a} * {b} = {a * b}')
