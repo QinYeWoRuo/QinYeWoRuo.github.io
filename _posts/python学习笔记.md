@@ -993,3 +993,10 @@ Python 3.6以后，格式化字符串还有更为简洁的书写方式，就是�
 
 a, b = 5, 10
 print(f'{a} * {b} = {a * b}')
+
+# 怎样查看某个python库的重要信息
+import 导入要查看的库
+help(PyHook3)，查看库的用法。
+help(PyHook3.HookManager())，可以查看具体方法的源码。
+dir(PyHook3)，用来查看库的属性、包含哪些函数等。
+
