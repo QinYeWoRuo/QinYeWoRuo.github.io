@@ -148,7 +148,10 @@ _   下划线
 
 
 
-
+gh <- function(x,y){
+z<-mean(x,y^2)
+return(z)
+}
 
 
 
